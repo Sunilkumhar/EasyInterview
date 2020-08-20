@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Sunil Kumhar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/result.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allan&family=Marcellus+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  <script src="https://kit.fontawesome.com/0ce27392f2.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: rgb(127, 197, 255);">
+  <div class="topnav">
+    <a href="#">
+      <div class="topnav-right">
+        <h2>SunilKumhar</h2>
+      </div>
+    </a>
+  </div>
+  <div class="result">
+    <h1 class="display-4" style="text-decoration: underline;">Your Performance</h1>
+    <table id="result">
+      <tr>
+        <th style="text-decoration: underline;width: 10%;font-size: 25px;">Question</th>
+        <th style="text-decoration: underline;width: 14%;font-size: 25px;">Grade</th>
+        <th style="text-decoration: underline;width: 16%;font-size: 25px;">Comment</th>
+      </tr>
+    </table>
+  </div>
+  <div class="result" id="final"></div>
+  <h2 class="analysis"> Analysis : </h2>
+  <div class="chart">
+    <canvas id="myChart" height="200"></canvas>
+  </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script src="./js/radar.js"></script>
+<script src="./js/score.js"></script>
+
+
+</html>

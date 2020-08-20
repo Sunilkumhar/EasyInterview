@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(63, 60, 60);
+  padding: 10px;
+  padding-right: 20px;
+  border: black 1px solid;
+  color:  white;
+  margin: 0px;
+}
+.topnav-right {
+  float: right;
+}
+.logo{
+  position: relative;
+  padding: 10px;
+  /* display: flex; */
+  float: right;
+  padding-right: 20px;
+  border: black 1px solid;
+  padding-left: 100%;
+  margin: 0px;
+  background-color: rgb(27, 26, 26);
+  color:  white;
+}
+
+.topnav-right img{
+  width: 50px;
+  height: 40px;
+  padding-bottom: 10px;
+}
+.topnav-right h2{
+  display: inline;
+}
+
+
+.main-info {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  border: black 1px solid;
+  background-color: rgb(230, 228, 220);
+
+}
+
+.candidate-info {
+  width: 37%;
+  border-right:black 2px dotted ;
+  /* margin-top: 40px; */
+
+}
+.candidate-info img{
+  margin-top: 30px;
+  margin-left: 24%;
+  border-radius: 50%;
+}
+.candidate-info h1{
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#information {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin: 5px;
+  margin-top: 6em;
+  padding-left: 5px;
+  border: black 1px solid;
+  background: rgb(212, 211, 206);
+}
+#information h2{
+  font-size: 40px;
+}
+#information h3{
+  margin-top: 6px;
+  padding-left: 5px;
+  font-size: 34px;
+}
+#information a{
+  margin-top: 6px;
+  padding-left: 5px;
+  font-size: 34px;
+  text-decoration: none;
+}
+#information a:hover{
+  text-decoration: underline;
+  color: rgb(109, 145, 245)
+}
+
+.disabled {
+  pointer-events: none;
+  background:rgb(179, 175, 175);
+}
+.disabled a{
+  color: rgb(218, 47, 47);
+}
+
+.questions {
+  width: 63%;
+}
+.questions .pagination {
+  display: inline-block;
+  margin-left: 16em;
+  padding: 10px;
+}
+.questions .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.questions .pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.questions .pagination a:hover:not(.active) {background-color: #ddd;}
+
+.questions .information {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.information .comment {
+  width: 34.5em;
+  height: 40px;
+  padding-left: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.questions .btn1 {
+  display: block;
+  cursor: pointer;
+  padding: 10px 20px;
+  
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin: 20px;
+  width: 130px;
+  transition: all 0.2s;
+  background-color: #242222;
+  letter-spacing: 1.5px;
+  color: white;
+}
+.questions .btn1:hover {
+  background-color: green;
+  color: #fbf5f3;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 9px #1a1919;
+}
+.questions .information .grading .marks #grade5 {
+  margin-left: 100px;
+}
+.questions .information .grading .marks {
+  margin-left: 20px;
+}
+
+.questions .btn {
+  display: block;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-left: 23em;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  width: 170px;
+  transition: all 0.2s;
+  background-color: #242222;
+  letter-spacing: 1.5px;
+  color: white;
+}
+
+.questions .btn:hover {
+  background-color: #4b4075;
+  color: #fbf5f3;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px #1a1919;
+}
+.questions .btn:active {
+  background-color: #4CAF50;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px #111111;
+}
