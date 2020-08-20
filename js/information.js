@@ -74,8 +74,12 @@ function validatewebsite() {
   const re = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
 
   if(!re.test(website.value)){
-    website.classList.add('is-invalid');
-    websitePresent=0;
+    if(website.value === ''){
+      websitePresent=1;
+    }else{
+      website.classList.add('is-invalid');
+      websitePresent=0;
+    }
   } else {
     website.classList.remove('is-invalid');
     websitePresent=1;
@@ -96,6 +100,11 @@ function errorMessage(color,messageoutput){
 function checkFilled(e) {
 
   // e.preventDefault();
+  console.log(website.value)
+  if(website.value === ''){
+    console.log(123);
+    websitePresent=1;
+  }
 
   if(namePresent== '0' || emailPresent== '0' || mobilePresent== '0' || websitePresent== '0' || idPresent == '0'){
     errorMessage('error','Please enter valid details')
