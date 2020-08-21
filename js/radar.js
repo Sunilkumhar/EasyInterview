@@ -5,7 +5,7 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Q.1','Q.2','Q.3','Q.4','Q.5'],
+        labels: ['Q.1', 'Q.2', 'Q.3', 'Q.4', 'Q.5'],
         datasets: [{
             label: 'grade',
             data: storedgrades,
