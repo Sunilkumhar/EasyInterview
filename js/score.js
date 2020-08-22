@@ -9,7 +9,10 @@ for (let i = 0; i < storedComments.length; i++) {
     var question = row.insertCell(0);
     var grade = row.insertCell(1);
     var comm = row.insertCell(2);
-
+    if(storedComments[i] === ''){
+        storedComments[i]='NotDefined'
+        console.log(123);
+    }
     question.innerHTML = `Q.${i+1}`;
     grade.innerHTML = `${storedgrades[i]}/5`;
     comm.innerHTML = storedComments[i];

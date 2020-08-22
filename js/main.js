@@ -7,24 +7,26 @@ var storedwebsite = localStorage.getItem("website");
 var comments = ['', '', '', '', ''];
 var grade = [0, 0, 0, 0, 0];
 var current = 1;
-//pagination
-if (current === 1) {
-    var disable = document.getElementById('smaller');
-    disable.classList.add("disabled");
-}
 document.querySelector('.candidate-info').innerHTML = `
-  <img src="./images/profile.png" alt="">
-  <h1>${storedname}</h1>
-  <div id="information">
+<img src="./images/profile.png" alt="">
+<h1>${storedname}</h1>
+<div id="information">
     <div style="display: flex;"><h2 >Id : <h3 > ${storedid}</h3></h2></div>
     <div style="display: flex;"><h2 >Email : <h3 >${storedemail}</h3></h2></div>
     <div style="display: flex;"><h2 >Phone : <h3 >${storedphone}</h3></h2></div>
     <div style="display: flex;"><h2 >Website : <h3 ><a href="${storedwebsite}">visit site</a></h3></h2></div>
 
-  </div>
-
+</div>
 `
 
+//pagination
+if (current === 1) {
+    var disable = document.getElementById('smaller');
+    disable.classList.add("disabled");
+    var video = document.querySelector('.iframeVideo');
+    video.innerHTML = `<iframe width="550" height="400" src="https://youtube.com/embed/hdI2bqOjy3c" title="JavaScript Free Online Video Tutorials"></iframe>`
+
+}
 
 paginate1 = (a) => {
 
@@ -108,6 +110,24 @@ whentodisable = () => {
         console.log(proceesTonext)
 
     }
+    var video = document.querySelector('.iframeVideo');
+    if(current ===1){
+        video.innerHTML = `<iframe width="550" height="400" src="https://youtube.com/embed/hdI2bqOjy3c" title="JavaScript Free Online Video Tutorials"></iframe>`
+    }
+    else if(current ===2){
+        video.innerHTML = `<iframe width="550" height="400" src="https://youtube.com/embed/W6NZfCO5SIk" title="JavaScript Free Online Video Tutorials"></iframe>`
+    }
+    else if(current ===3){
+        video.innerHTML = `<iframe width="550" height="400" src="https://youtube.com/embed/2nZiB1JItbY" title="JavaScript Free Online Video Tutorials"></iframe>`
+    }
+    else if(current ===4){
+        video.innerHTML = `<iframe width="550" height="400" src="https://youtube.com/embed/UB1O30fR-EE" title="HTML Free Online Video Tutorials"></iframe>`
+    }
+    else if(current ===5){
+        video.innerHTML = `<iframe width="550" height="400" src="https://youtube.com/embed/yfoY53QXEnI" title="CSS Free Online Video Tutorials"></iframe>`
+    }
+
+
 }
 
 //display grade
@@ -126,22 +146,25 @@ function next() {
     // console.log(current);
     com = document.querySelector('.comment').value;
     // console.log(123);
-    comments[current - 1] = com;
-    grade[current - 1] = x;
+    if(com === '' || x ===0){
+        alert('Please Enter grade/comment!!')
+    }else{
+        comments[current - 1] = com;
+        grade[current - 1] = x;
+        x=0;
+        // console.log(comments);
+        // console.log(grade);
+        // console.log(current);
+        if (current < 5) {
+            paginatesave();
+        }
 
-    console.log(comments);
-    console.log(grade);
-    console.log(current);
-    if (current < 5) {
-        paginatesave();
+        localStorage.setItem("comments", JSON.stringify(comments));
+        localStorage.setItem("grade", JSON.stringify(grade));
+
+        document.querySelector('.given').innerHTML = ``;
+        document.querySelector('#commentxt').value = ``;
     }
-
-    localStorage.setItem("comments", JSON.stringify(comments));
-    localStorage.setItem("grade", JSON.stringify(grade));
-
-    document.querySelector('.given').innerHTML = ``;
-    document.querySelector('#commentxt').value = ``;
-
 }
 // setTimeout(function(){ console.log(comments); }, 3000);
 
