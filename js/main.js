@@ -93,13 +93,15 @@ whentodisable = () => {
         first.classList.remove("disabled");
         end.classList.remove("disabled");
     }
+    com = document.querySelector('.comment').value;
+    console.log(com)
     if (current === 5) {
         let proceesTonext = document.getElementById('send');
         proceesTonext.style.display = "none";
         let proceed = document.querySelector('#send1');
         proceed.style.display = "block";
 
-        console.log(proceesTonext)
+        // console.log(proceesTonext)
     } else {
         let proceesTonext = document.getElementById('send');
         proceesTonext.style.display = "block";
@@ -107,7 +109,7 @@ whentodisable = () => {
         proceed.style.display = "none";
 
         // proceed.innerHTML = `<input id="commentxt" class="comment" type="text" placeholder="Comments..">`
-        console.log(proceesTonext)
+        // console.log(proceesTonext)
 
     }
     var video = document.querySelector('.iframeVideo');
@@ -147,8 +149,11 @@ function next() {
     com = document.querySelector('.comment').value;
     // console.log(123);
     if(com === '' || x ===0){
+        // console.log(current);
+        document.getElementById("mylink").href = "#";
         alert('Please Enter grade/comment!!')
     }else{
+        document.getElementById("mylink").href = "./result.html";
         comments[current - 1] = com;
         grade[current - 1] = x;
         x=0;
