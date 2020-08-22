@@ -3,7 +3,7 @@ var storedgrades = JSON.parse(localStorage.getItem("grade"));
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'radar',
     data: {
         labels: ['Q.1', 'Q.2', 'Q.3', 'Q.4', 'Q.5'],
         datasets: [{
