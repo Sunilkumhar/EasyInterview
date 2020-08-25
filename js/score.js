@@ -36,7 +36,7 @@ if (average === 4) {
     finalcomment = "Excellent";
 }
 if (average === 5) {
-    finalcomment = "Briellent";
+    finalcomment = "Brilliant";
 }
 
 
